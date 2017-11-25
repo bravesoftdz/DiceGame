@@ -3,7 +3,7 @@ unit UDiceGame;
 interface
 
 uses
-  UPlayer, UDice;
+  UDice;
 
 type
   TDiceGame = class
