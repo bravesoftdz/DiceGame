@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="wgh9kfk881j_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Project1:UDiceGame.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:UDiceGame.TDiceGame">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="100,180,86,116" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:Project1:UDiceGame.TDiceGame.Dice1" />
+      <reference referencedUin="delphi:e_field:src:Project1:UDiceGame.TDiceGame.Dice2" />
+      <reference referencedUin="delphi:l_ast:src:Project1:UDiceGame.TDiceGame.Dice1">
+        <property name="sourceAnchor" value="186,238" />
+        <property name="targetAnchor" value="360,238" />
+        <property name="bendpoints" value="" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:Project1:UDiceGame.TDiceGame.Dice2">
+        <property name="sourceAnchor" value="186,230" />
+        <property name="targetAnchor" value="360,230" />
+        <property name="bendpoints" value="" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:Project1:UDiceGame.TDiceGame.play()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:UDice.TDice">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="360,180,145,116" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:Project1:UDice.TDice.faceValue" />
+      <reference referencedUin="delphi:e_method:src:Project1:UDice.TDice.getFaceValue()" />
+      <reference referencedUin="delphi:e_method:src:Project1:UDice.TDice.roll()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:UPlayer.TPlayer">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="80,60,108,67" />
+      <property name="location_set_by_user" value="True" />
+    </reference>
+  </view>
+</nodeSet>
