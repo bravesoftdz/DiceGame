@@ -30,7 +30,7 @@ implementation
 constructor TForm1.create(AOwner: TComponent);
 begin
   inherited;
-  DiceGame:= TDiceGame.Create;
+  DiceGame := TDiceGame.create;
 end;
 
 procedure TForm1.FormClick(Sender: TObject);
