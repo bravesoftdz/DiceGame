@@ -3,7 +3,7 @@ unit UDiceGame;
 interface
 
 uses
-  UDice;
+  System.SysUtils, UDice;
 
 type
   TDiceGame = class
@@ -11,16 +11,22 @@ type
     /// <link>aggregation</link>
     Dice1, Dice2: TDice;
   public
-    procedure play();
+    function play: string;
   end;
 
 implementation
 
 { TDiceGame }
 
-procedure TDiceGame.play;
+function TDiceGame.play: string;
 begin
-//
+  if not Assigned(Dice1) then
+    Dice1:= TDice.Create;
+  Dice1.roll;
+  if not Assigned(Dice2) then
+    Dice2:= TDice.Create;
+  Dice2.roll;
+  result := inttostr(Dice1.getFaceValue + Dice2.getFaceValue);
 end;
 
 end.

@@ -5,14 +5,19 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,
+  UDiceGame;
 
 type
   TForm1 = class(TForm)
+    Label1: TLabel;
+    procedure FormClick(Sender: TObject);
   private
-    { Private declarations }
+    /// <link>aggregation</link>
+    DiceGame: TDiceGame;
   public
-    { Public declarations }
+  published
+    constructor create(AOwner: TComponent); override;
   end;
 
 var
@@ -21,5 +26,16 @@ var
 implementation
 
 {$R *.dfm}
+
+constructor TForm1.create(AOwner: TComponent);
+begin
+  inherited;
+  DiceGame:= TDiceGame.Create;
+end;
+
+procedure TForm1.FormClick(Sender: TObject);
+begin
+  Label1.Caption := DiceGame.play;
+end;
 
 end.

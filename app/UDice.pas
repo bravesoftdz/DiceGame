@@ -17,12 +17,12 @@ implementation
 
 function TDice.getFaceValue: Integer;
 begin
-//
+  result := faceValue;
 end;
 
 procedure TDice.roll;
 begin
-//
+  faceValue := 1 + Random(5);
 end;
 
 end.

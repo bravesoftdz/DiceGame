@@ -11,6 +11,20 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClick = FormClick
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 272
+    Top = 72
+    Width = 129
+    Height = 129
+    Caption = 'Go'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -107
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
 end
