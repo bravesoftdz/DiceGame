@@ -12,11 +12,17 @@ type
     Dice1, Dice2: TDice;
   public
     function play: string;
+    procedure initialize(numOfPlayer: integer);
   end;
 
 implementation
 
 { TDiceGame }
+
+procedure TDiceGame.initialize(numOfPlayer: integer);
+begin
+  { TODO : todo }
+end;
 
 function TDiceGame.play: string;
 begin
