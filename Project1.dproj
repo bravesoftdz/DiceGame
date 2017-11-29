@@ -90,6 +90,7 @@
 			<DCCReference Include="app\UDiceGame.pas"/>
 			<DCCReference Include="app\UPlayer.pas"/>
 			<DCCReference Include="app\UDice.pas"/>
+			<DCCReference Include="app\UWin.pas"/>
 			<None Include="ModelSupport_Project1\default.txaPackage"/>
 			<None Include="ModelSupport_Project1\default.txvpck"/>
 			<None Include="ModelSupport_Project1\UDiceGame\default.txvpck"/>
@@ -100,6 +101,7 @@
 			<None Include="ModelSupport_Project1\UDice\default.txvpck"/>
 			<None Include="ModelSupport_Project1\UPlayer\default.txvpck"/>
 			<None Include="ModelSupport_Project1\Unit1\default.txvpck"/>
+			<None Include="ModelSupport_Project1\UWin\default.txvpck"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

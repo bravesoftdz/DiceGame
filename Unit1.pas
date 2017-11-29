@@ -11,7 +11,10 @@ uses
 type
   TForm1 = class(TForm)
     Label1: TLabel;
-    procedure FormClick(Sender: TObject);
+    Edit1: TEdit;
+    Label2: TLabel;
+    procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure Label1Click(Sender: TObject);
   private
     /// <link>aggregation</link>
     DiceGame: TDiceGame;
@@ -33,9 +36,23 @@ begin
   DiceGame := TDiceGame.create;
 end;
 
-procedure TForm1.FormClick(Sender: TObject);
+procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+  begin
+    Edit1.Hide;
+    DiceGame.initialize(strtoint(Edit1.Text));
+    Label2.Caption := Label2.Caption + ' ' + Edit1.Text;
+  end;
+end;
+
+procedure TForm1.Label1Click(Sender: TObject);
 begin
   Label1.Caption := DiceGame.play;
+  Refresh;
+  sleep(1000);
+  Label1.Caption := DiceGame.WhoseTurn;
 end;
 
 end.

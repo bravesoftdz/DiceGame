@@ -2,10 +2,11 @@ program Project1;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {Form1} ,
+  Unit1 in 'Unit1.pas' {Form1},
   UDiceGame in 'app\UDiceGame.pas',
   UPlayer in 'app\UPlayer.pas',
-  UDice in 'app\UDice.pas';
+  UDice in 'app\UDice.pas',
+  UWin in 'app\UWin.pas';
 
 {$R *.res}
 
