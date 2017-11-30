@@ -33,26 +33,34 @@ implementation
 constructor TForm1.create(AOwner: TComponent);
 begin
   inherited;
-  DiceGame := TDiceGame.create;
+
 end;
 
 procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if Key = VK_RETURN then
+  if not assigned(DiceGame) then
   begin
-    Edit1.Hide;
-    DiceGame.initialize(strtoint(Edit1.Text));
-    Label2.Caption := Label2.Caption + ' ' + Edit1.Text;
+    if Key = VK_RETURN then
+    begin
+      DiceGame := TDiceGame.create;
+      Edit1.Hide;
+      DiceGame.initialize(strtoint(Edit1.Text));
+      Label2.Caption := Label2.Caption + ' ' + Edit1.Text;
+      Label1.Caption := 'Go Player1';
+    end;
   end;
 end;
 
 procedure TForm1.Label1Click(Sender: TObject);
 begin
-  Label1.Caption := DiceGame.play;
-  Refresh;
-  sleep(1000);
-  Label1.Caption := DiceGame.WhoseTurn;
+  if assigned(DiceGame) then
+  begin
+    Label1.Caption := DiceGame.play;
+    Refresh;
+    sleep(1000);
+    Label1.Caption := DiceGame.WhoseTurn;
+  end;
 end;
 
 end.

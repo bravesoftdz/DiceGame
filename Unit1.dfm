@@ -20,7 +20,6 @@ object Form1: TForm1
     Height = 299
     Align = alClient
     Alignment = taCenter
-    Caption = 'Go'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -107
@@ -28,7 +27,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     OnClick = Label1Click
-    ExplicitTop = 50
+    ExplicitWidth = 33
+    ExplicitHeight = 129
   end
   object Label2: TLabel
     Left = 8

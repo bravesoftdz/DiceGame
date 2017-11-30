@@ -50,14 +50,16 @@ begin
       Dice2 := TDice.Create;
     Dice2.roll;
 
-  if ((Dice1.getFaceValue + Dice2.getFaceValue) = 7) then
-  begin
-    result := 'You Win !';
-    Win := TWin.Create;
+    if ((Dice1.getFaceValue + Dice2.getFaceValue) = 7) then
+    begin
+      result := ' ';
+      Win := TWin.Create;
+    end
+    else
+      result := inttostr(Dice1.getFaceValue + Dice2.getFaceValue);
   end
   else
-    result := inttostr(Dice1.getFaceValue + Dice2.getFaceValue);
-  end else result := 'You Win !';
+    result := 'Win !';
 end;
 
 function TDiceGame.WhoseTurn: string;
@@ -66,20 +68,22 @@ var
 begin
   if not assigned(Win) then
   begin
-  for i := 0 to Player.Count - 1 do
-    with Player do
-    begin
-      if Items[i].WhoGO then
+    for i := 0 to Player.Count - 1 do
+      with Player do
       begin
-        g := i + 1;
-        Items[i].WhoGO := false;
+        if Items[i].WhoGO then
+        begin
+          g := i + 1;
+          Items[i].WhoGO := false;
+        end;
       end;
-    end;
-  if (g = Player.Count) then
-    g := 0;
-  Player.Items[g].WhoGO := true;
-  result := 'Player ' + inttostr(g + 1);
-  end else result := 'You Win !';
+    if (g = Player.Count) then
+      g := 0;
+    Player.Items[g].WhoGO := true;
+    result := 'Go Player ' + inttostr(g + 1);
+  end
+  else
+    result := 'Win !';
 end;
 
 end.

@@ -9,19 +9,19 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:UDiceGame.TDiceGame">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="100,180,135,176" />
+      <property name="bounds" value="60,220,135,176" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_field:src:Project1:UDiceGame.TDiceGame.Dice1" />
       <reference referencedUin="delphi:e_field:src:Project1:UDiceGame.TDiceGame.Dice2" />
       <reference referencedUin="delphi:l_ast:src:Project1:UDiceGame.TDiceGame.Dice1">
-        <property name="sourceAnchor" value="235,238" />
-        <property name="targetAnchor" value="360,238" />
+        <property name="sourceAnchor" value="195,258" />
+        <property name="targetAnchor" value="360,258" />
         <property name="bendpoints" value="" />
         <property name="bounds_setted_by_user" value="True" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:Project1:UDiceGame.TDiceGame.Dice2">
-        <property name="sourceAnchor" value="235,230" />
-        <property name="targetAnchor" value="360,230" />
+        <property name="sourceAnchor" value="195,250" />
+        <property name="targetAnchor" value="360,250" />
         <property name="bendpoints" value="" />
         <property name="bounds_setted_by_user" value="True" />
       </reference>
@@ -31,7 +31,7 @@
       <reference referencedUin="delphi:e_method:src:Project1:UDiceGame.TDiceGame.initialize(System.Integer)" />
       <reference referencedUin="delphi:e_method:src:Project1:UDiceGame.TDiceGame.WhoseTurn()" />
       <reference referencedUin="delphi:l_ast:src:Project1:UDiceGame.TDiceGame.Win">
-        <property name="sourceAnchor" value="235,200" />
+        <property name="sourceAnchor" value="195,240" />
         <property name="targetAnchor" value="328,107" />
         <property name="bendpoints" value="" />
       </reference>
@@ -56,10 +56,11 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:Unit1.TForm1">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="190,413,140,190" />
+      <property name="bounds" value="280,420,140,190" />
+      <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_ast:src:Project1:Unit1.TForm1.DiceGame">
-        <property name="sourceAnchor" value="225,413" />
-        <property name="targetAnchor" value="225,356" />
+        <property name="sourceAnchor" value="280,449" />
+        <property name="targetAnchor" value="195,371" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_field:src:Project1:Unit1.TForm1.Label1" />
